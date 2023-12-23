@@ -1,4 +1,4 @@
-<x-action-section>
+<x-jetstream.action-section>
     <x-slot name="title">
         {{ __('Browser Sessions') }}
     </x-slot>
@@ -61,13 +61,13 @@
                 {{ __('Log Out Other Browser Sessions') }}
             </x-jetstream.button>
 
-            <x-action-message class="ms-3" on="loggedOut">
+            <x-jetstream.action-message class="ms-3" on="loggedOut">
                 {{ __('Done.') }}
-            </x-action-message>
+            </x-jetstream.action-message>
         </div>
 
         <!-- Log Out Other Devices Confirmation Modal -->
-        <x-dialog-modal wire:model.live="confirmingLogout">
+        <x-jetstream.dialog-modal wire:model.live="confirmingLogout">
             <x-slot name="title">
                 {{ __('Log Out Other Browser Sessions') }}
             </x-slot>
@@ -77,23 +77,23 @@
 
                 <div class="mt-4" x-data="{}"
                     x-on:confirming-logout-other-browser-sessions.window="setTimeout(() => $refs.password.focus(), 250)">
-                    <x-input type="password" class="mt-1 block w-3/4" autocomplete="current-password"
+                    <x-jetstream.input type="password" class="mt-1 block w-3/4" autocomplete="current-password"
                         placeholder="{{ __('Password') }}" x-ref="password" wire:model="password"
                         wire:keydown.enter="logoutOtherBrowserSessions" />
 
-                    <x-input-error for="password" class="mt-2" />
+                    <x-jetstream.input-error for="password" class="mt-2" />
                 </div>
             </x-slot>
 
             <x-slot name="footer">
-                <x-secondary-button wire:click="$toggle('confirmingLogout')" wire:loading.attr="disabled">
+                <x-jetstream.secondary-button wire:click="$toggle('confirmingLogout')" wire:loading.attr="disabled">
                     {{ __('Cancel') }}
-                </x-secondary-button>
+                </x-jetstream.secondary-button>
 
                 <x-jetstream.button class="ms-3" wire:click="logoutOtherBrowserSessions" wire:loading.attr="disabled">
                     {{ __('Log Out Other Browser Sessions') }}
                 </x-jetstream.button>
             </x-slot>
-        </x-dialog-modal>
+        </x-jetstream.dialog-modal>
     </x-slot>
-</x-action-section>
+</x-jetstream.action-section>

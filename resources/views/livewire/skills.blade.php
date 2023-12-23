@@ -22,7 +22,7 @@
                         <thead class="sticky top-[-1px] z-10 text-xs text-gray-700 uppercase bg-gray-50 text-center">
                             <tr>
                                 @foreach ($columns as $column)
-                                    <th scope="col" class={{ $loop->index === "0" ? "py-3 px-2" : "py-3 px-6" }}>
+                                    <th scope="col" class={{ $loop->index === '0' ? 'py-3 px-2' : 'py-3 px-6' }}>
                                         {{ $column }}
                                     </th>
                                 @endforeach
@@ -37,46 +37,46 @@
                                 </tr> --}}
                             {{-- @else
                                 @foreach ($surats as $surat) --}}
-                                    <tr class="bg-white border-b hover:shadow-lg hover:border-b-4 hover:border-t-2 text-center">
-                                        <td class="py-4 px-2">
-                                            {{-- {{ ($surats->currentPage() - 1) * $surats->perpage() + $loop->index + 1 }} --}}
-                                            No
-                                        </td>
-                                        <td class="py-4 px-6">
-                                            {{-- {{ $surat->no_surat }} --}}
-                                            category
-                                        </td>
-                                        <td class="py-4 px-6">
-                                            {{-- {{ $surat->surat_dari }} --}}
-                                            name
-                                        </td>
-                                        <td class="py-4 px-6">
-                                            {{-- {{ $surat->kategori }} --}}
-                                            image
-                                        </td>
-                                        <td class="py-4 flex justify-center">
-                                            {{-- <div class="tooltip static z-20 hover:relative" data-tip="Lihat">
+                            <tr class="bg-white border-b hover:shadow-lg hover:border-b-4 hover:border-t-2 text-center">
+                                <td class="py-4 px-2">
+                                    {{-- {{ ($surats->currentPage() - 1) * $surats->perpage() + $loop->index + 1 }} --}}
+                                    No
+                                </td>
+                                <td class="py-4 px-6">
+                                    {{-- {{ $surat->no_surat }} --}}
+                                    category
+                                </td>
+                                <td class="py-4 px-6">
+                                    {{-- {{ $surat->surat_dari }} --}}
+                                    name
+                                </td>
+                                <td class="py-4 px-6">
+                                    {{-- {{ $surat->kategori }} --}}
+                                    image
+                                </td>
+                                <td class="py-4 flex justify-center">
+                                    {{-- <div class="tooltip static z-20 hover:relative" data-tip="Lihat">
                                                 <a href={{ route('surat.masuk.belum.show', $surat->id) }}
                                                 <a href=""
                                                     class="mr-1 text-blue-600 hover:bg-blue-300 hover:rounded-md">
                                                     <i class="fa-solid fa-eye rounded-md border border-blue-400 p-1"></i>
                                                 </a>
                                             </div> --}}
-                                            <div class="tooltip static z-20 hover:relative" data-tip="Ubah">
-                                                {{-- <a href={{ route('surat.masuk.belum.edit', $surat->id) }} --}}
-                                                <a href=""
-                                                    class="mr-1 text-blue-600 hover:bg-blue-300 hover:rounded-md">
-                                                    <i class="fa-solid fa-pen-to-square rounded-md border border-blue-400 p-1"></i>
-                                                </a>
-                                            </div>
-                                            <div class="tooltip static z-20 hover:relative" data-tip="Hapus">
-                                                {{-- <label for="delete{{ $surat->id }}" --}}
-                                                <label for="delete"
-                                                    class="mr-1 text-red-600 hover:bg-red-300 hover:rounded-md">
-                                                    <i class="fa-solid fa-trash-can rounded-md border border-red-400 p-1"></i>
-                                                </label>
-                                                {{-- <input type="checkbox" id="delete{{ $surat->id }}" class="modal-toggle" /> --}}
-                                                {{-- <div class="modal" id="popup-modal" tabindex="-1"
+                                    <div class="tooltip static z-20 hover:relative" data-tip="Ubah">
+                                        {{-- <a href={{ route('surat.masuk.belum.edit', $surat->id) }} --}}
+                                        <a href="" class="mr-1 text-blue-600 hover:bg-blue-300 hover:rounded-md">
+                                            <i
+                                                class="fa-solid fa-pen-to-square rounded-md border border-blue-400 p-1"></i>
+                                        </a>
+                                    </div>
+                                    <div class="tooltip static z-20 hover:relative" data-tip="Hapus">
+                                        {{-- <label for="delete{{ $surat->id }}" --}}
+                                        <label for="delete"
+                                            class="mr-1 text-red-600 hover:bg-red-300 hover:rounded-md">
+                                            <i class="fa-solid fa-trash-can rounded-md border border-red-400 p-1"></i>
+                                        </label>
+                                        {{-- <input type="checkbox" id="delete{{ $surat->id }}" class="modal-toggle" /> --}}
+                                        {{-- <div class="modal" id="popup-modal" tabindex="-1"
                                                     class="fixed hidden top-0 left-0 right-0 z-50 p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
                                                     <div class="relative w-full h-full max-w-md md:h-auto">
                                                         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -121,10 +121,10 @@
                                                         </div>
                                                     </div>
                                                 </div> --}}
-                                            </div>
-                                        </td>
-                                    </tr>
-                                {{-- @endforeach
+                                    </div>
+                                </td>
+                            </tr>
+                            {{-- @endforeach
                             @endif --}}
                         </tbody>
                     </table>

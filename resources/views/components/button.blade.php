@@ -1,3 +1,4 @@
-<button {{ $attributes->merge(['type' => 'submit', 'class' => 'inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150']) }}>
+@props(['href' => '#', 'type' => 'button', 'color' => 'blue'])
+<a href={{ $href }} type={{ $type }} class="text-white font-bold bg-gradient-to-r from-{{ $color }}-500 via-{{ $color }}-600 to-{{ $color }}-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-{{ $color }}-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
     {{ $slot }}
-</button>
+</a>

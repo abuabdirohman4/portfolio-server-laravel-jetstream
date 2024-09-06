@@ -29,6 +29,7 @@
 </head>
 
 <body class="font-sans antialiased">
+    <x-purge-color />
     <x-jetstream.banner />
 
     <div class="min-h-screen bg-gray-100">

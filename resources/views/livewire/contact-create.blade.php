@@ -1,5 +1,3 @@
-
-
 <div class="mb-5">
     {{-- <ul>
         @foreach ($contacts as $contact)
@@ -36,4 +34,3 @@
         {{-- {{$name}} --}}
     </form>
 </div>
-
